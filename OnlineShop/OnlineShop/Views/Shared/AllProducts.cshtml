@@ -1,0 +1,18 @@
+﻿@model Product
+
+<div class="col-md-4">
+    <div class="card mb-4 shadow-sm">
+        <div class="img-thumbnail card-img-top overflow-hidden project-card-img-wrapper">
+            <img class="project-card-img" src="@Model.img" alt="@Model.name" />
+        </div>
+        <div class="card-body">
+            <h3>@Model.name</h3>
+            <p class="card-text">@Model.shortDescr</p>
+            <p class="card-text">Виробник: @Model.Manufacturer.manufacturerName</p>
+            <p class="card-text">Ціна: @Model.price.ToString("c")</p>
+            <div class="d-flex justify-content-center align-items-center">
+                <p><a class="btn btn-outline-primary" asp-controller="Cart" asp-action="addToCart" asp-route-id="@Model.id">Додати до корзини</a></p>
+            </div>
+        </div>
+    </div>
+</div>

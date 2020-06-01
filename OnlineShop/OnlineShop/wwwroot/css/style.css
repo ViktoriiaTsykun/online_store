@@ -1,0 +1,35 @@
+﻿body {
+    background: #fcfcfc;
+}
+
+.project-main-sidebar {
+    margin-top: 70px;
+    margin-bottom: -40px;
+    padding-top: 10px;
+}
+
+main {
+    margin-top: 80px;
+}
+
+.project-card-img-wrapper {
+  width: 350px;
+  height: 400px;
+}
+
+.project-card-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-cart-empty {
+    font-size: 48px;
+}
+
+.project-cart-item-price {
+    white-space: nowrap;
+}
+
+.project-cart-completed-order {
+    font-size: 48px;
+}

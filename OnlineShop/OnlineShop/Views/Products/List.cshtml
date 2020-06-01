@@ -1,0 +1,18 @@
+﻿<div class="d-flex flex-column align-items-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">@Model.currCategory</h1>
+        <p class="lead text-muted">@Model.categoryDescr</p>
+    </div>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                @{
+                    foreach (Product product in Model.allProducts)
+                    {
+                        @Html.Partial("AllProducts", product)
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>

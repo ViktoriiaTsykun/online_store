@@ -1,0 +1,20 @@
+﻿@model HomeViewModel
+    <div class="d-flex flex-column justify-content-center">
+        <img src="~/img/home/tagline.png" class="shadow" />
+        <div class="container">
+            <h1 class="jumbotron-heading">Популярні товари</h1>
+            <p class="lead text-muted">У цьому блоці показані найпопулярніші товари серед наших покупців за останні місяці.</p>
+        </div>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    @{
+                        foreach (Product product in Model.favProducts)
+                        {
+                            @Html.Partial("AllProducts", product)
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
